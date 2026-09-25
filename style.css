@@ -372,3 +372,53 @@ body {
     padding: 0 20px 20px;
   }
 }
+
+/* --- Sprachumschalter (Deutsch / Français) --- */
+.lang-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.16);
+  padding: 3px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  gap: 2px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn:active {
+  transform: scale(0.97);
+}
+
+.lang-btn.active {
+  background: #ffffff;
+  color: var(--primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
+/* Sichtbarkeitsregeln für zweisprachige Elemente */
+body.lang-de .lang-fr {
+  display: none !important;
+}
+
+body.lang-fr .lang-de {
+  display: none !important;
+}

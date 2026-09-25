@@ -3,264 +3,488 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Tippkarten: Unser Power-Drink am Sportfest (6D)</title>
+  <title>Tippkarten / Fiches d'aide: Unser Power-Drink (6D)</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="lang-de">
 
-  <!-- App Header -->
+  <!-- App Header mit Sprachumschalter -->
   <header class="app-header">
     <div class="header-inner">
       <span class="badge-tag">Mathe 6D &bull; Herr Dayi</span>
-      <h1>🍹 Tippkarten: Unser Power-Drink</h1>
-      <p class="header-subtitle">Gestufte Hilfen zum Arbeitsblatt &bdquo;Brüche addieren&ldquo;</p>
+      
+      <h1 class="lang-de">🍹 Tippkarten: Unser Power-Drink</h1>
+      <h1 class="lang-fr">🍹 Fiches d'aide : Notre boisson énergisante</h1>
+      
+      <p class="header-subtitle lang-de">Gestufte Hilfen zum Arbeitsblatt &bdquo;Brüche addieren&ldquo;</p>
+      <p class="header-subtitle lang-fr">Aides graduées pour la fiche &laquo;&thinsp;Additionner des fractions&thinsp;&raquo;</p>
+
+      <!-- Sprachumschalter Button -->
+      <div class="lang-toggle-wrap">
+        <div class="lang-switch" role="group" aria-label="Sprachauswahl">
+          <button class="lang-btn active" data-lang="de" title="Auf Deutsch anzeigen">🇩🇪 Deutsch</button>
+          <button class="lang-btn" data-lang="fr" title="Afficher en français">🇫🇷 Français</button>
+        </div>
+      </div>
     </div>
   </header>
 
   <!-- Infoleiste -->
   <div class="info-banner">
     <div class="info-icon">💡</div>
-    <div class="info-text">
+    <div class="info-text lang-de">
       <strong>So nutzt du die Tippkarten:</strong> Versuche die Teilaufgabe zuerst mit deinem Partner auf dem Blatt zu lösen. Wenn ihr Hilfe braucht, tippt die passende Aufgabe an und deckt <em>Schritt für Schritt</em> die Tipps auf!
+    </div>
+    <div class="info-text lang-fr">
+      <strong>Comment utiliser les fiches d'aide :</strong> Essaie d'abord de résoudre la question avec ton binôme sur la feuille. Si vous avez besoin d'aide, clique sur l'activité correspondante et découvre les indices <em>étape par étape</em> !
     </div>
   </div>
 
   <!-- Hauptbereich: Gestufte Hilfen -->
   <main class="container">
 
-    <!-- AUFGABE 1 -->
+    <!-- AUFGABE 1 / ACTIVITÉ 1 -->
     <article class="task-card open" id="task-1">
       <div class="task-header">
-        <div class="task-badge">Aufgabe 1</div>
-        <h2 class="task-title">Das Problem erkennen (Lukas vs. Amira)</h2>
+        <div class="task-badge">
+          <span class="lang-de">Aufgabe 1</span>
+          <span class="lang-fr">Activité 1</span>
+        </div>
+        <h2 class="task-title">
+          <span class="lang-de">Das Problem erkennen (Lukas vs. Amira)</span>
+          <span class="lang-fr">Comprendre le problème (Lukas contre Amira)</span>
+        </h2>
         <span class="task-arrow">▼</span>
       </div>
       <div class="task-body">
         <div class="task-question">
-          Warum können wir <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;Liter Kirschsaft und <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;Liter Wasser <strong>nicht direkt</strong> zusammenzählen? Warum ist Lukas' Weg unlogisch?
+          <span class="lang-de">
+            Warum können wir <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;Liter Kirschsaft und <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;Liter Wasser <strong>nicht direkt</strong> zusammenzählen? Warum ist Lukas' Rechenweg unlogisch?
+          </span>
+          <span class="lang-fr">
+            Pourquoi ne pouvons-nous pas additionner <strong>directement</strong> <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;litre de jus de cerise et <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;litre d'eau ? Pourquoi le calcul de Lukas n'a-t-il pas de sens ?
+          </span>
         </div>
 
         <div class="hint-list">
+          <!-- Stufe 1 -->
           <div class="hint-item step-1">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">1</span> 💡 Tipp 1: Material vergleichen (Stückgröße)</span>
+              <span class="hint-label">
+                <span class="step-num">1</span>
+                <span class="lang-de">💡 Tipp 1: Material vergleichen (Stückgröße)</span>
+                <span class="lang-fr">💡 Indice 1 : Comparer le matériel (taille des parts)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Schaut euch die beiden Skalenstreifen auf eurem Tisch an:<br>
-              In wie viele Teile ist der Kirschsaftstreifen geteilt (Halbe)? In wie viele Teile der Wasserstreifen (Achtel)?<br>
-              👉 <em>Vergleicht ein rotes Halbe-Stück mit einem blauen Achtel-Stück: Sind die Stücke gleich groß? Warum kann man sie nicht einfach wie gleich große Teile zusammenzählen?</em>
+              <div class="lang-de">
+                Schaut euch die beiden Skalenstreifen auf eurem Tisch an:<br>
+                • In wie viele Teile ist der Kirschsaftstreifen geteilt (Halbe)?<br>
+                • In wie viele Teile der Wasserstreifen (Achtel)?<br>
+                👉 <em>Vergleicht ein rotes Halbe-Stück mit einem blauen Achtel-Stück: Sind die Stücke gleich groß? Warum kann man sie nicht einfach wie gleich große Teile zusammenzählen?</em>
+              </div>
+              <div class="lang-fr">
+                Regardez les deux bandes graduées sur votre table :<br>
+                • En combien de parts la bande de jus est-elle partagée (demis) ?<br>
+                • En combien de parts la bande d'eau est-elle partagée (huitièmes) ?<br>
+                👉 <em>Comparez une part rouge (un demi) avec une part bleue (un huitième) : Ont-elles la même taille ? Pourquoi ne peut-on pas simplement les compter ensemble comme des parts égales ?</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 2 -->
           <div class="hint-item step-2">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">2</span> 🔍 Tipp 2: Lukas' Rechnung hinterfragen (Denkanstoß)</span>
+              <span class="hint-label">
+                <span class="step-num">2</span>
+                <span class="lang-de">🔍 Tipp 2: Lukas' Denkfehler verstehen (Bedeutung des Nenners)</span>
+                <span class="lang-fr">🔍 Indice 2 : Comprendre l'erreur de Lukas (rôle du dénominateur)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Schaut euch an, was Lukas gerechnet hat: Er zählt Zähler plus Zähler und Nenner plus Nenner:<br>
-              <div class="math-highlight">
-                <span class="frac"><span class="num">1 + 3</span><span class="den">2 + 8</span></span> = <span class="frac"><span class="num">4</span><span class="den">10</span></span>&thinsp;Liter
+              <div class="lang-de">
+                Lukas rechnet Zähler plus Zähler und Nenner plus Nenner:
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">1 + 3</span><span class="den">2 + 8</span></span> = <span class="frac"><span class="num">4</span><span class="den">10</span></span>&thinsp;Liter
+                </div>
+                👉 <em>Überlegt: Was bedeutet der Nenner bei einem Bruch? (Er gibt den Namen und die Größe der Stücke an). Warum kann man Halbe und Achtel nicht einfach zu „Zehnteln“ zusammenzählen? Ändert sich die Stückgröße beim Zusammenkippen?</em>
               </div>
-              Amira hat aber schon einen halben Krug (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;Liter) Saft eingegossen.<br>
-              👉 <em>Ist <span class="frac"><span class="num">4</span><span class="den">10</span></span> mehr oder weniger als <span class="frac"><span class="num">1</span><span class="den">2</span></span>? Was passiert in Wirklichkeit mit der Füllmenge im Krug, wenn man Wasser dazugießt?</em>
+              <div class="lang-fr">
+                Lukas additionne les numérateurs entre eux et les dénominateurs entre eux :
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">1 + 3</span><span class="den">2 + 8</span></span> = <span class="frac"><span class="num">4</span><span class="den">10</span></span>&thinsp;litre
+                </div>
+                👉 <em>Réfléchissez : Que signifie le dénominateur dans une fraction ? (Il indique le nom et la taille des parts). Pourquoi ne peut-on pas simplement compter des demis et des huitièmes comme des « dixièmes » ? La taille des parts change-t-elle comme par magie quand on mélange ?</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 3 -->
           <div class="hint-item step-3">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">3</span> ⭐ Tipp 3: Satzbausteine (Formulierungshilfe)</span>
+              <span class="hint-label">
+                <span class="step-num">3</span>
+                <span class="lang-de">⭐ Tipp 3: Satzbausteine (Formulierungshilfe)</span>
+                <span class="lang-fr">⭐ Indice 3 : Phrases guides (aide à la formulation)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Nutzt diese Satzanfänge für eure eigene Begründung auf dem Arbeitsblatt:<br>
-              • <em>„Man kann <span class="frac"><span class="num">1</span><span class="den">2</span></span> und <span class="frac"><span class="num">3</span><span class="den">8</span></span> nicht direkt addieren, weil die Stücke... (Tipp: Schaut auf die Nenner 2 und 8).“</em><br>
-              • <em>„Lukas' Rechnung ist unlogisch, weil <span class="frac"><span class="num">4</span><span class="den">10</span></span>&thinsp;Liter ... als der halbe Liter Saft ist. Wenn Wasser dazukommt, muss die Gesamtmenge aber...“</em><br>
-              • <em>„Brüche darf man erst zusammenzählen, wenn die Teile...“</em><br>
-              👉 <em>Vervollständigt die Sätze mit euren eigenen Worten!</em>
+              <div class="lang-de">
+                Nutzt diese Satzanfänge für eure Begründung auf dem Arbeitsblatt:<br>
+                • <em>„Man kann <span class="frac"><span class="num">1</span><span class="den">2</span></span> und <span class="frac"><span class="num">3</span><span class="den">8</span></span> nicht direkt addieren, weil die Stücke unterschiedlich...“</em><br>
+                • <em>„Lukas' Rechnung ist falsch, weil der Nenner die Größe der Teile angibt und nicht einfach...“</em><br>
+                • <em>„Brüche darf man erst zusammenzählen, wenn alle Teile die gleiche... haben.“</em><br>
+                👉 <em>Vervollständigt die Sätze in euren eigenen Worten!</em>
+              </div>
+              <div class="lang-fr">
+                Utilisez ces débuts de phrases pour votre justification sur la feuille :<br>
+                • <em>« On ne peut pas additionner directement <span class="frac"><span class="num">1</span><span class="den">2</span></span> et <span class="frac"><span class="num">3</span><span class="den">8</span></span> parce que les parts sont de taille... »</em><br>
+                • <em>« Le calcul de Lukas est faux parce que le dénominateur indique la taille des parts et ne peut pas simplement être... »</em><br>
+                • <em>« On ne peut additionner des fractions que si toutes les parts ont la même... »</em><br>
+                👉 <em>Complétez les phrases avec vos propres mots !</em>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- AUFGABE 2: SCHABLONE -->
+    <!-- AUFGABE 2: SCHABLONE / ACTIVITÉ 2 : BANDE -->
     <article class="task-card" id="task-2a">
       <div class="task-header">
-        <div class="task-badge">Aufgabe 2 (Schablone)</div>
-        <h2 class="task-title">Schablone auflegen &amp; Bruch verfeinern</h2>
+        <div class="task-badge">
+          <span class="lang-de">Aufgabe 2 (Schablone)</span>
+          <span class="lang-fr">Activité 2 (Bande)</span>
+        </div>
+        <h2 class="task-title">
+          <span class="lang-de">Schablone auflegen &amp; Bruch verfeinern</span>
+          <span class="lang-fr">Poser la bande &amp; affiner la fraction</span>
+        </h2>
         <span class="task-arrow">▼</span>
       </div>
       <div class="task-body">
         <div class="task-question">
-          Legt die transparente Schablone passgenau über den roten Kirschsaft-Streifen (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L). Wie viele Teile entstehen? Tragt eure Beobachtung auf dem Wissensspeicher ein.
+          <span class="lang-de">
+            Legt die transparente Schablone über den roten Kirschsaftstreifen (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L). Wie viele Teile entstehen? Tragt eure Beobachtung auf dem Wissensspeicher ein.
+          </span>
+          <span class="lang-fr">
+            Posez la bande transparente sur la bande rouge de jus de cerise (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L). Combien de parts obtient-on ? Notez votre observation sur la fiche mémo.
+          </span>
         </div>
 
         <div class="hint-list">
+          <!-- Stufe 1 -->
           <div class="hint-item step-1">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">1</span> 💡 Tipp 1: Schablone auflegen (Handlung)</span>
+              <span class="hint-label">
+                <span class="step-num">1</span>
+                <span class="lang-de">💡 Tipp 1: Schablone auflegen (Handlung)</span>
+                <span class="lang-fr">💡 Indice 1 : Poser la bande (manipulation)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Nehmt die transparente Folien-Schablone mit den gestrichelten Linien und legt sie passgenau über euren roten Saftstreifen (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L).<br>
-              Achtet darauf, dass die Ränder exakt bündig aufeinanderliegen.<br>
-              👉 <em>Was geschieht mit dem großen roten Halbe-Stück? In wie viele kleinere Stücke wird es zerlegt?</em>
+              <div class="lang-de">
+                Nehmt die transparente Folien-Schablone mit den gestrichelten Linien und legt sie über euren roten Saftstreifen (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L).<br>
+                Achtet darauf, dass die Ränder genau bündig aufeinanderliegen.<br>
+                👉 <em>Was geschieht mit dem großen roten Halbe-Stück? In wie viele kleinere Stücke wird es zerlegt?</em>
+              </div>
+              <div class="lang-fr">
+                Prenez la bande transparente avec les lignes pointillées et posez-la sur votre bande rouge de jus (<span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L).<br>
+                Veillez à ce que les bords soient parfaitement superposés.<br>
+                👉 <em>Qu'arrive-t-il à la grande part rouge (un demi) ? En combien de parts plus petites est-elle découpée ?</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 2 -->
           <div class="hint-item step-2">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">2</span> 🔍 Tipp 2: Neue Teile abzählen (Verfeinern)</span>
+              <span class="hint-label">
+                <span class="step-num">2</span>
+                <span class="lang-de">🔍 Tipp 2: Neue Teile abzählen (Verfeinern)</span>
+                <span class="lang-fr">🔍 Indice 2 : Compter les nouvelles parts (affinement)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Durch das Auflegen der Schablone hat der ganze Streifen nun eine feinere Einteilung bekommen:<br>
-              • In wie viele gleich große Teile ist der ganze Krug/Streifen jetzt unterteilt? <em>(Das ist euer neuer Nenner!).</em><br>
-              • Zählt nun mit dem Finger nach: Wie viele dieser neuen kleinen Teile sind rot mit Kirschsaft gefüllt? <em>(Das ist euer neuer Zähler!).</em><br>
-              👉 <em>Notiert den neuen Bruch in den Kästchen auf eurem Arbeitsblatt.</em>
+              <div class="lang-de">
+                Durch das Auflegen der Schablone hat der ganze Streifen nun eine feinere Einteilung bekommen:<br>
+                • In wie viele gleich große Teile ist der ganze Streifen jetzt unterteilt? <em>(Das ist euer neuer Nenner!).</em><br>
+                • Zählt nun mit dem Finger nach: Wie viele dieser neuen kleinen Teile sind rot mit Kirschsaft gefüllt? <em>(Das ist euer neuer Zähler!).</em><br>
+                👉 <em>Notiert den neuen Bruch in den Kästchen auf eurem Wissensspeicher.</em>
+              </div>
+              <div class="lang-fr">
+                En posant la bande transparente, toute la bande a maintenant un découpage plus fin :<br>
+                • En combien de parts égales toute la bande est-elle découpée maintenant ? <em>(C'est votre nouveau dénominateur !).</em><br>
+                • Comptez maintenant avec le doigt : Combien de ces nouvelles petites parts sont rouges ? <em>(C'est votre nouveau numérateur !).</em><br>
+                👉 <em>Écrivez la nouvelle fraction dans les cases de votre fiche mémo.</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 3 -->
           <div class="hint-item step-3">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">3</span> ⭐ Tipp 3: Rechnerisches Erweitern (Rechengerüst)</span>
+              <span class="hint-label">
+                <span class="step-num">3</span>
+                <span class="lang-de">⭐ Tipp 3: Rechnerisches Erweitern (Denkanstoß &amp; Regel)</span>
+                <span class="lang-fr">⭐ Indice 3 : Amplifier par le calcul (piste &amp; règle)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Übertragt eure Beobachtung in die mathematische Rechnung:<br>
-              <div class="math-highlight">
-                <span class="frac"><span class="num">1</span><span class="den">2</span></span> = 
-                <span class="frac"><span class="num">1 &middot; &square;</span><span class="den">2 &middot; &square;</span></span> = 
-                <span class="frac"><span class="num">&square;</span><span class="den">&square;</span></span>
+              <div class="lang-de">
+                Erinnert euch an das Erweitern von Brüchen:<br>
+                • Mit welcher Zahl müsst ihr Zähler und Nenner von <span class="frac"><span class="num">1</span><span class="den">2</span></span> multiplizieren, um auf den neuen Nenner 8 zu kommen? (2 &middot; &square; = 8)<br>
+                • Regel beim Erweitern: Multipliziert den Zähler mit genau derselben Zahl!<br>
+                👉 <em>Tragt die Erweiterungszahl bei „Dazu erweitere ich den Bruch...“ auf dem Wissensspeicher ein.</em>
               </div>
-              • Überlegt: Mit welcher Zahl muss die 2 im Nenner multipliziert werden, um auf euren neuen Nenner zu kommen?<br>
-              • Denkt an die Regel beim Erweitern: Multipliziert den Zähler oben mit genau derselben Zahl!<br>
-              👉 <em>Diese Zahl tragt ihr bei „Erweitert mit der Zahl“ ein.</em>
+              <div class="lang-fr">
+                Rappelez-vous comment amplifier une fraction :<br>
+                • Par quel nombre faut-il multiplier le numérateur et le dénominateur de <span class="frac"><span class="num">1</span><span class="den">2</span></span> pour obtenir 8 au dénominateur ? (2 &middot; &square; = 8)<br>
+                • Règle d'amplification : Multipliez le numérateur par exactement le même nombre !<br>
+                👉 <em>Écrivez le nombre multiplicateur sur votre fiche mémo.</em>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- AUFGABE 2: KRUG & RECHNUNG -->
+    <!-- AUFGABE 2: KRUG & RECHNUNG / ACTIVITÉ 2 : PICHET & CALCUL -->
     <article class="task-card" id="task-2b">
       <div class="task-header">
-        <div class="task-badge">Aufgabe 2 (Krug &amp; Rechnung)</div>
-        <h2 class="task-title">Im Krug darstellen &amp; Brüche addieren</h2>
+        <div class="task-badge">
+          <span class="lang-de">Aufgabe 2 (Krug &amp; Rechnung)</span>
+          <span class="lang-fr">Activité 2 (Pichet &amp; Calcul)</span>
+        </div>
+        <h2 class="task-title">
+          <span class="lang-de">Im Krug darstellen &amp; Brüche addieren</span>
+          <span class="lang-fr">Représenter dans le pichet &amp; additionner</span>
+        </h2>
         <span class="task-arrow">▼</span>
       </div>
       <div class="task-body">
         <div class="task-question">
-          Färbt die Krüge auf dem Wissensspeicher ein, rechnet die Aufgabe aus und beantwortet die Forscherfrage: <em>„Wie viel Liter ist in dem Krug?“</em>
+          <span class="lang-de">
+            Färbt die Krüge auf dem Wissensspeicher ein, rechnet die Aufgabe aus und beantwortet die Forscherfrage: <em>„Wie viel Liter ist in dem Krug?“</em>
+          </span>
+          <span class="lang-fr">
+            Coloriez les pichets sur la fiche mémo, effectuez le calcul et répondez à la question de recherche : <em>« Combien de litres y a-t-il dans le pichet ? »</em>
+          </span>
         </div>
 
         <div class="hint-list">
+          <!-- Stufe 1 -->
           <div class="hint-item step-1">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">1</span> 💡 Tipp 1: Krüge einfärben (Anschauung)</span>
+              <span class="hint-label">
+                <span class="step-num">1</span>
+                <span class="lang-de">💡 Tipp 1: Krüge einfärben (Anschauung)</span>
+                <span class="lang-fr">💡 Indice 1 : Colorier les pichets (visuel)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Schaut euch die Krüge auf dem Wissensspeicher an:<br>
-              • Im 2. Krug („Saft verfeinert“) zeichnet ihr die neue Einteilung aus Schritt 1 ein.<br>
-              • Im Ziel-Krug ganz rechts schüttet ihr beide Zutaten zusammen: Beginnt ganz unten mit dem Saft (rot). Färbt danach das Wasser (blau) direkt darüber ein.<br>
-              👉 <em>Wie viele Achtel-Stücke sind nun insgesamt im Ziel-Krug gefärbt? An welchem Skalenstrich landet ihr?</em>
+              <div class="lang-de">
+                Schaut euch die Krüge auf dem Wissensspeicher an:<br>
+                • Im 2. Krug („Saft verfeinert“) zeichnet ihr die neue 8er-Einteilung aus Schritt 1 ein (4 Achtel rot).<br>
+                • Im Ziel-Krug ganz rechts schüttet ihr beide Zutaten zusammen: Saft (rot) unten, Wasser (blau) direkt darüber.<br>
+                👉 <em>Wie viele Achtel-Stücke sind nun insgesamt im Ziel-Krug gefärbt? An welchem Skalenstrich landet ihr?</em>
+              </div>
+              <div class="lang-fr">
+                Regardez les pichets sur la fiche mémo :<br>
+                • Dans le 2e pichet (« Jus affiné »), tracez la nouvelle graduation en 8 parts de l'étape 1 (4 huitièmes en rouge).<br>
+                • Dans le pichet final tout à droite, mélangez les deux ingrédients : le jus (rouge) en bas, l'eau (bleu) juste au-dessus.<br>
+                👉 <em>Combien de parts de huitièmes sont maintenant coloriées dans le pichet final ? À quel trait de graduation arrivez-vous ?</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 2 -->
           <div class="hint-item step-2">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">2</span> 🔍 Tipp 2: Die Rechnung aufstellen (Gleichnamig machen)</span>
+              <span class="hint-label">
+                <span class="step-num">2</span>
+                <span class="lang-de">🔍 Tipp 2: Die Rechnung aufstellen (Gleichnamig machen)</span>
+                <span class="lang-fr">🔍 Indice 2 : Poser le calcul (même dénominateur)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Schreibt eure Additionsaufgabe auf: <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span><br>
-              Ihr habt herausgefunden, wie der Bruch <span class="frac"><span class="num">1</span><span class="den">2</span></span> mit der neuen Teilegröße heißt.<br>
-              👉 <em>Ersetzt <span class="frac"><span class="num">1</span><span class="den">2</span></span> durch euren erweiterten Bruch. Jetzt haben beide Brüche denselben Nenner!</em>
+              <div class="lang-de">
+                Schreibt eure Additionsaufgabe auf: <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span>.<br>
+                Ihr habt am Streifenmodell herausgefunden, wie der Bruch <span class="frac"><span class="num">1</span><span class="den">2</span></span> mit der neuen Teilegröße (Achtel) heißt.<br>
+                👉 <em>Ersetzt den Bruch <span class="frac"><span class="num">1</span><span class="den">2</span></span> durch euren verfeinerten Bruch aus Schritt 1. Jetzt haben beide Brüche denselben Nenner und können addiert werden!</em>
+              </div>
+              <div class="lang-fr">
+                Écrivez votre addition : <span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span>.<br>
+                Vous avez découvert sur la bande comment s'écrit la fraction <span class="frac"><span class="num">1</span><span class="den">2</span></span> avec la nouvelle taille de parts (en huitièmes).<br>
+                👉 <em>Remplacez la fraction <span class="frac"><span class="num">1</span><span class="den">2</span></span> par votre fraction affinée de l'étape 1. Maintenant, les deux fractions ont le même dénominateur et peuvent être additionnées !</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 3 -->
           <div class="hint-item step-3">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">3</span> ⭐ Tipp 3: Brüche addieren &amp; Antwortsatz (Rechenregel)</span>
+              <span class="hint-label">
+                <span class="step-num">3</span>
+                <span class="lang-de">⭐ Tipp 3: Brüche addieren &amp; Antwortsatz (Rechenregel)</span>
+                <span class="lang-fr">⭐ Indice 3 : Additionner &amp; phrase de réponse (règle)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Erinnert euch daran, wie man Brüche mit gleichem Nenner addiert:<br>
-              <div class="math-highlight">
-                <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
-                <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 
-                <span class="frac"><span class="num">&square; + 3</span><span class="den">8</span></span> = 
-                <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;Liter
+              <div class="lang-de">
+                Erinnert euch daran, wie man Brüche mit gleichem Nenner addiert:
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square; + 3</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;Liter
+                </div>
+                • <strong>Zähler:</strong> Addiert die beiden oberen Zahlen.<br>
+                • <strong>Nenner:</strong> Was passiert mit dem Nenner? (Denkt an eure Zeichnung im Krug: Die Größe der Teilstücke bleibt Achtel!).<br>
+                👉 <em>Schreibt nun euren Antwortsatz auf dem Arbeitsblatt: Wie viel Liter ist in dem Krug? Passt der Power-Drink in den 1-Liter-Krug?</em>
               </div>
-              • <strong>Zähler:</strong> Addiert die beiden oberen Zahlen.<br>
-              • <strong>Nenner:</strong> Was passiert mit dem Nenner? (Denkt an eure Zeichnung im Krug: Die Größe der Teilstücke bleibt Achtel!).<br>
-              👉 <em>Schreibt nun euren Antwortsatz auf dem Arbeitsblatt: Wie viel Liter ist in dem Krug? Passt der Power-Drink in den 1-Liter-Krug?</em>
+              <div class="lang-fr">
+                Rappelez-vous comment additionner deux fractions ayant le même dénominateur :
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square; + 3</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;litre
+                </div>
+                • <strong>Numérateur :</strong> Additionnez les deux nombres du haut.<br>
+                • <strong>Dénominateur :</strong> Que devient le dénominateur ? (Pensez au pichet : la taille des morceaux reste des huitièmes !).<br>
+                👉 <em>Écrivez maintenant votre phrase de réponse sur la feuille : Combien de litres y a-t-il dans le pichet ? La boisson rentre-t-elle dans le pichet de 1 litre ?</em>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- AUFGABE 3* (SPRINTER) -->
+    <!-- AUFGABE 3* (SPRINTER) / ACTIVITÉ 3* (BONUS) -->
     <article class="task-card" id="task-3-sprinter">
       <div class="task-header">
-        <div class="task-badge">Aufgabe 3* (Sprinter)</div>
-        <h2 class="task-title">Power-Drink XL &amp; Behauptung prüfen</h2>
+        <div class="task-badge">
+          <span class="lang-de">Aufgabe 3* (Sprinter)</span>
+          <span class="lang-fr">Activité 3* (Bonus)</span>
+        </div>
+        <h2 class="task-title">
+          <span class="lang-de">Power-Drink XL &amp; Behauptung prüfen</span>
+          <span class="lang-fr">Boisson XL &amp; vérifier l'affirmation</span>
+        </h2>
         <span class="task-arrow">▼</span>
       </div>
       <div class="task-body">
         <div class="task-question">
-          Passt der Power-Drink XL (<span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">1</span><span class="den">4</span></span> Liter) in den 1-Liter-Krug? Hat Lukas mit seiner Behauptung recht?
+          <span class="lang-de">
+            Passt der Power-Drink XL (<span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">1</span><span class="den">4</span></span> Liter) in den 1-Liter-Krug? Hat Lukas mit seiner Behauptung recht?
+          </span>
+          <span class="lang-fr">
+            La boisson énergisante XL (<span class="frac"><span class="num">1</span><span class="den">2</span></span> + <span class="frac"><span class="num">3</span><span class="den">8</span></span> + <span class="frac"><span class="num">1</span><span class="den">4</span></span> litre) rentre-t-elle dans le pichet de 1 litre ? Lukas a-t-il raison ?
+          </span>
         </div>
 
         <div class="hint-list">
+          <!-- Stufe 1 -->
           <div class="hint-item step-1">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">1</span> 💡 Tipp 1: Gemeinsamen Nenner finden (Zu Teil a)</span>
+              <span class="hint-label">
+                <span class="step-num">1</span>
+                <span class="lang-de">💡 Tipp 1: Gemeinsamen Nenner finden (Zu Teil a)</span>
+                <span class="lang-fr">💡 Indice 1 : Trouver un dénominateur commun (Partie a)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Die drei Zutaten haben die Nenner 2, 8 und 4:<br>
-              <div class="math-highlight">
-                <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;l Saft + 
-                <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;l Wasser + 
-                <span class="frac"><span class="num">1</span><span class="den">4</span></span>&thinsp;l Zitronensaft
+              <div class="lang-de">
+                Die drei Zutaten haben die Nenner 2, 8 und 4:
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;l Saft + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;l Wasser + 
+                  <span class="frac"><span class="num">1</span><span class="den">4</span></span>&thinsp;l Zitronensaft
+                </div>
+                Finde einen gemeinsamen Nenner, auf den du alle drei Brüche bringen kannst.<br>
+                👉 <em>Tipp: Welche Zahl kommt in der 2er-, 4er- und 8er-Reihe vor? Erweitere die Brüche so, dass alle denselben Nenner haben!</em>
               </div>
-              Finde einen gemeinsamen Nenner, auf den du alle drei Brüche bringen kannst.<br>
-              👉 <em>Welche Zahl kommt in der 2er-, 4er- und 8er-Reihe vor? Erweitere die Brüche so, dass alle denselben Nenner haben!</em>
+              <div class="lang-fr">
+                Les trois ingrédients ont les dénominateurs 2, 8 et 4 :
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">1</span><span class="den">2</span></span>&thinsp;L de jus + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span>&thinsp;L d'eau + 
+                  <span class="frac"><span class="num">1</span><span class="den">4</span></span>&thinsp;L de jus de citron
+                </div>
+                Trouve un dénominateur commun pour les trois fractions.<br>
+                👉 <em>Conseil : Quel nombre apparaît à la fois dans les tables de 2, 4 et 8 ? Amplifie les fractions pour qu'elles aient toutes le même dénominateur !</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 2 -->
           <div class="hint-item step-2">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">2</span> 🔍 Tipp 2: Rechnen und mit 1 Liter vergleichen (Zu Teil a)</span>
+              <span class="hint-label">
+                <span class="step-num">2</span>
+                <span class="lang-de">🔍 Tipp 2: Rechnen und mit 1 Liter vergleichen (Zu Teil a)</span>
+                <span class="lang-fr">🔍 Indice 2 : Calculer et comparer à 1 litre (Partie a)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Addiere nun alle drei gleichnamigen Brüche zusammen:<br>
-              <div class="math-highlight">
-                <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
-                <span class="frac"><span class="num">3</span><span class="den">8</span></span> + 
-                <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> = 
-                <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;Liter
+              <div class="lang-de">
+                Addiere nun alle drei gleichnamigen Brüche zusammen:
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;Liter
+                </div>
+                Überlege dir: Wie viele Achtel-Liter ergeben genau ein ganzes Gefäß (<span class="frac"><span class="num">8</span><span class="den">8</span></span>&thinsp;Liter = 1&thinsp;Liter)?<br>
+                👉 <em>Ist dein Zähler größer oder kleiner als 8? Was bedeutet das für den 1-Liter-Krug: Reicht er aus oder läuft er über?</em>
               </div>
-              Überlege dir: Wie viele Achtel-Liter ergeben genau ein ganzes Gefäß (<span class="frac"><span class="num">8</span><span class="den">8</span></span>&thinsp;Liter = 1&thinsp;Liter)?<br>
-              👉 <em>Ist dein Zähler größer oder kleiner als 8? Was bedeutet das für den 1-Liter-Krug: Reicht er aus oder läuft er über?</em>
+              <div class="lang-fr">
+                Additionne maintenant les trois fractions au même dénominateur :
+                <div class="math-highlight">
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">3</span><span class="den">8</span></span> + 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span> = 
+                  <span class="frac"><span class="num">&square;</span><span class="den">8</span></span>&thinsp;litre
+                </div>
+                Réfléchis : Combien de huitièmes font exactement un pichet plein (<span class="frac"><span class="num">8</span><span class="den">8</span></span>&thinsp;litre = 1&thinsp;litre) ?<br>
+                👉 <em>Ton numérateur est-il supérieur ou inférieur à 8 ? Qu'est-ce que cela signifie : le pichet déborde-t-il ou suffit-il ?</em>
+              </div>
             </div>
           </div>
 
+          <!-- Stufe 3 -->
           <div class="hint-item step-3">
             <button class="hint-btn">
-              <span class="hint-label"><span class="step-num">3</span> ⭐ Tipp 3: Ein Gegenbeispiel finden (Zu Teil b)</span>
+              <span class="hint-label">
+                <span class="step-num">3</span>
+                <span class="lang-de">⭐ Tipp 3: Ein Gegenbeispiel finden (Zu Teil b)</span>
+                <span class="lang-fr">⭐ Indice 3 : Trouver un contre-exemple (Partie b)</span>
+              </span>
               <span class="hint-state">Aufdecken ▼</span>
             </button>
             <div class="hint-box">
-              Lukas behauptet: Wenn man drei Brüche mit den Nennern 2, 4 und 8 zusammenzählt, ist das Ergebnis <em>immer größer als 1</em>.<br>
-              Um eine mathematische Behauptung zu widerlegen, musst du <strong>nicht alle Fälle prüfen</strong>, sondern nur <strong>ein einziges funktionierendes Gegenbeispiel</strong> angeben, bei dem die Summe höchstens 1 (also &le; 1) ist.<br>
-              👉 <em>Strategie-Tipp: Wähle drei Brüche mit den Nennern 2, 4 und 8, deren Zähler so klein wie möglich sind (z.&thinsp;B. Stammbrüche mit dem Zähler 1). Addiere sie und überprüfe, ob das Ergebnis &lt; 1 ist!</em>
+              <div class="lang-de">
+                Lukas behauptet: Wenn man drei Brüche mit den Nennern 2, 4 und 8 zusammenzählt, ist das Ergebnis <em>immer größer als 1</em>.<br>
+                Um eine mathematische Behauptung zu widerlegen, musst du <strong>nicht alle Fälle prüfen</strong>, sondern nur <strong>ein einziges funktionierendes Gegenbeispiel</strong> angeben, bei dem die Summe höchstens 1 (also &le; 1) ist.<br>
+                👉 <em>Strategie-Tipp: Wie müssen die Zähler gewählt werden, damit die Gesamtsumme möglichst klein bleibt? Teste die kleinstmöglichen Zähler größer als 0!</em>
+              </div>
+              <div class="lang-fr">
+                Lukas affirme : « Si on additionne trois fractions avec les dénominateurs 2, 4 et 8, le résultat est <em>toujours supérieur à 1</em>. »<br>
+                Pour réfuter une affirmation mathématique, il suffit de trouver <strong>un seul contre-exemple</strong> qui fonctionne, où la somme est inférieure ou égale à 1 (donc &le; 1).<br>
+                👉 <em>Piste stratégique : Comment choisir les numérateurs pour que la somme totale reste la plus petite possible ? Teste les plus petits numérateurs possibles strictement supérieurs à 0 !</em>
+              </div>
             </div>
           </div>
         </div>

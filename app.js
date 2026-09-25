@@ -1,10 +1,52 @@
 // ==========================================================================
 // Tippkarten: Unser Power-Drink (Klasse 6D)
 // Interaktive Steuerung der gestuften Hilfen (Accordion & Reveal)
+// Zweisprachige Unterstützung: Deutsch / Français
 // ==========================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Aufgaben-Karten ein-/ausklappen (Task Accordion)
+  // --- 1. Sprachumschaltung (Deutsch / Français) ---
+  const langButtons = document.querySelectorAll('.lang-btn');
+  let currentLang = localStorage.getItem('tippkarten_lang') || 'de';
+
+  function setLanguage(lang) {
+    currentLang = lang;
+    document.body.classList.remove('lang-de', 'lang-fr');
+    document.body.classList.add(`lang-${lang}`);
+    try {
+      localStorage.setItem('tippkarten_lang', lang);
+    } catch (e) {
+      // Ignorieren bei blockiertem localStorage
+    }
+
+    langButtons.forEach((btn) => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Aktualisiere Text der Aufdecken/Zuklappen-Buttons
+    document.querySelectorAll('.hint-item').forEach((item) => {
+      const hintState = item.querySelector('.hint-state');
+      if (hintState) {
+        const isOpen = item.classList.contains('open');
+        if (lang === 'fr') {
+          hintState.textContent = isOpen ? 'Fermer ▲' : 'Découvrir ▼';
+        } else {
+          hintState.textContent = isOpen ? 'Zuklappen ▲' : 'Aufdecken ▼';
+        }
+      }
+    });
+  }
+
+  // Initial setzen
+  setLanguage(currentLang);
+
+  langButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      setLanguage(btn.dataset.lang);
+    });
+  });
+
+  // --- 2. Aufgaben-Karten ein-/ausklappen (Task Accordion) ---
   const taskHeaders = document.querySelectorAll('.task-header');
 
   taskHeaders.forEach((header) => {
@@ -28,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 2. Gestufte Hilfen aufdecken / zuklappen (Hint Reveal)
+  // --- 3. Gestufte Hilfen aufdecken / zuklappen (Hint Reveal) ---
   const hintButtons = document.querySelectorAll('.hint-btn');
 
   hintButtons.forEach((btn) => {
@@ -43,7 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = hintItem.classList.toggle('open');
 
       if (hintState) {
-        hintState.textContent = isOpen ? 'Zuklappen ▲' : 'Aufdecken ▼';
+        if (currentLang === 'fr') {
+          hintState.textContent = isOpen ? 'Fermer ▲' : 'Découvrir ▼';
+        } else {
+          hintState.textContent = isOpen ? 'Zuklappen ▲' : 'Aufdecken ▼';
+        }
       }
     });
   });
