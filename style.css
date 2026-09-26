@@ -314,11 +314,54 @@ body {
 /* Box Content */
 .hint-box {
   display: none;
-  padding: 14px 20px 16px;
+  padding: 16px 22px 18px;
   font-size: 16px;
   line-height: 1.6;
   color: #1e293b;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.hint-box p {
+  margin: 6px 0;
+}
+
+.hint-box ul {
+  margin: 8px 0 10px 22px;
+  padding: 0;
+}
+
+.hint-box li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+.hint-impuls {
+  margin-top: 10px;
+  padding: 9px 14px;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  border-left: 3.5px solid currentColor;
+  font-weight: 500;
+}
+
+.hint-merke {
+  margin-top: 10px;
+  padding: 9px 13px;
+  background: #fef3c7;
+  border-left: 3.5px solid #d97706;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #92400e;
+}
+
+.hint-notfall {
+  margin-top: 12px;
+  padding: 9px 13px;
+  background: #ecfdf5;
+  border-left: 3.5px solid #059669;
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: #065f46;
 }
 
 .hint-item.open .hint-box {
