@@ -1,6 +1,6 @@
 /* ==========================================================================
    Tippkarten: Unser Power-Drink (Klasse 6D)
-   Klare, kognitiv reduzierte & barrierefreie CSS-Gestaltung
+   iPad- & Tablet-optimierte, barrierefreie & kognitiv reduzierte Gestaltung
    ========================================================================== */
 
 :root {
@@ -27,7 +27,7 @@
   --text-main: #1e293b;
   --text-muted: #64748b;
   --border: #e2e8f0;
-  --radius: 14px;
+  --radius: 16px;
 }
 
 * {
@@ -41,22 +41,23 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text-main);
-  line-height: 1.5;
-  font-size: 16px;
-  padding-bottom: 40px;
+  line-height: 1.55;
+  font-size: 16.5px;
+  padding-bottom: 48px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* --- Header --- */
 .app-header {
   background: linear-gradient(135deg, #143264 0%, #1e4282 100%);
   color: #ffffff;
-  padding: 24px 20px 20px;
+  padding: 24px 20px 22px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(20, 50, 100, 0.15);
+  box-shadow: 0 4px 16px rgba(20, 50, 100, 0.15);
 }
 
 .header-inner {
-  max-width: 680px;
+  max-width: 740px;
   margin: 0 auto;
 }
 
@@ -64,56 +65,59 @@ body {
   display: inline-block;
   background: rgba(255, 255, 255, 0.18);
   color: #ffffff;
-  font-size: 12px;
+  font-size: 12.5px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  padding: 3px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
   margin-bottom: 10px;
 }
 
 .app-header h1 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -0.3px;
 }
 
 .header-subtitle {
-  font-size: 14px;
+  font-size: 15px;
   color: #dbeafe;
   font-weight: 400;
 }
 
 /* --- Infobanner --- */
 .info-banner {
-  max-width: 680px;
-  margin: 16px auto 12px;
-  padding: 12px 16px;
+  max-width: 740px;
+  margin: 18px auto 14px;
+  padding: 14px 18px;
   background: #ffffff;
   border: 1.5px dashed #cbd5e1;
-  border-radius: 12px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 14px;
-  color: #475569;
+  gap: 14px;
+  font-size: 15px;
+  color: #334155;
   width: calc(100% - 32px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
 }
 
 .info-icon {
-  font-size: 24px;
+  font-size: 26px;
   flex-shrink: 0;
 }
 
 /* --- Container --- */
 .container {
-  max-width: 680px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 0 16px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
+  width: 100%;
 }
 
 /* --- Aufgaben-Karten --- */
@@ -121,9 +125,9 @@ body {
   background: var(--card-bg);
   border: 1.5px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .task-card:hover {
@@ -132,41 +136,45 @@ body {
 
 .task-card.open {
   border-color: var(--primary);
-  box-shadow: 0 4px 14px rgba(20, 50, 100, 0.08);
+  box-shadow: 0 6px 18px rgba(20, 50, 100, 0.1);
 }
 
 .task-header {
-  padding: 16px;
+  padding: 18px 20px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   cursor: pointer;
   background: #ffffff;
   user-select: none;
+  touch-action: manipulation;
 }
 
 .task-badge {
   background: var(--primary);
   color: #ffffff;
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 800;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 8px;
   flex-shrink: 0;
+  letter-spacing: 0.2px;
 }
 
 .task-title {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   color: var(--primary);
   flex-grow: 1;
   margin: 0;
+  line-height: 1.35;
 }
 
 .task-arrow {
-  font-size: 13px;
+  font-size: 15px;
   color: var(--text-muted);
   transition: transform 0.25s ease;
+  flex-shrink: 0;
 }
 
 .task-card.open .task-arrow {
@@ -177,7 +185,7 @@ body {
 /* --- Body --- */
 .task-body {
   display: none;
-  padding: 0 16px 16px;
+  padding: 0 20px 20px;
   border-top: 1px solid #f1f5f9;
 }
 
@@ -187,43 +195,44 @@ body {
 
 .task-question {
   background: #f8fafc;
-  border-left: 3.5px solid var(--accent-red);
-  padding: 10px 14px;
-  border-radius: 0 8px 8px 0;
-  font-size: 14.5px;
+  border-left: 4px solid var(--accent-red);
+  padding: 12px 16px;
+  border-radius: 0 10px 10px 0;
+  font-size: 16px;
   color: #334155;
-  margin: 14px 0 16px;
-  line-height: 1.5;
+  margin: 16px 0 18px;
+  line-height: 1.55;
 }
 
 /* --- Gestufte Hilfen --- */
 .hint-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .hint-item {
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
   border: 1.5px solid #e2e8f0;
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .hint-btn {
   width: 100%;
-  padding: 12px 14px;
+  padding: 14px 18px;
   background: #f8fafc;
   border: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14.5px;
+  font-size: 16px;
   font-weight: 700;
   color: #334155;
   cursor: pointer;
   text-align: left;
   transition: background 0.15s ease;
+  touch-action: manipulation;
 }
 
 .hint-btn:active {
@@ -233,30 +242,33 @@ body {
 .hint-label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .step-num {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: #e2e8f0;
   color: #334155;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 800;
+  flex-shrink: 0;
 }
 
 .hint-state {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-muted);
   background: #ffffff;
-  padding: 3px 8px;
-  border-radius: 6px;
+  padding: 4px 10px;
+  border-radius: 7px;
   border: 1px solid #cbd5e1;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 /* Farbdifferenzierung der Stufen */
@@ -302,9 +314,9 @@ body {
 /* Box Content */
 .hint-box {
   display: none;
-  padding: 12px 16px 14px;
-  font-size: 14.5px;
-  line-height: 1.55;
+  padding: 14px 20px 16px;
+  font-size: 16px;
+  line-height: 1.6;
   color: #1e293b;
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
@@ -324,84 +336,69 @@ body {
   flex-direction: column;
   vertical-align: middle;
   text-align: center;
-  padding: 0 2px;
+  padding: 0 3px;
   font-weight: 700;
   line-height: 1;
-  font-size: 0.98em;
+  font-size: 1.02em;
 }
 
 .frac .num {
-  border-bottom: 1.6px solid currentColor;
-  padding-bottom: 1px;
+  border-bottom: 1.8px solid currentColor;
+  padding-bottom: 2px;
 }
 
 .frac .den {
-  padding-top: 2px;
+  padding-top: 3px;
 }
 
 .math-highlight {
   background: #ffffff;
   border: 1.5px solid #cbd5e1;
-  border-radius: 8px;
-  padding: 8px 12px;
-  margin: 8px 0;
+  border-radius: 10px;
+  padding: 9px 15px;
+  margin: 10px 0;
   display: inline-block;
-  font-size: 16px;
+  font-size: 17.5px;
 }
 
 /* --- Footer --- */
 .app-footer {
   text-align: center;
-  padding: 24px 16px 8px;
-  font-size: 13px;
+  padding: 28px 16px 10px;
+  font-size: 14px;
   color: var(--text-muted);
-}
-
-/* --- Responsive --- */
-@media (min-width: 600px) {
-  .app-header h1 {
-    font-size: 26px;
-  }
-  .task-header {
-    padding: 18px 20px;
-  }
-  .task-title {
-    font-size: 17px;
-  }
-  .task-body {
-    padding: 0 20px 20px;
-  }
 }
 
 /* --- Sprachumschalter (Deutsch / Français) --- */
 .lang-toggle-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 14px;
+  margin-top: 16px;
 }
 
 .lang-switch {
   display: inline-flex;
-  background: rgba(255, 255, 255, 0.16);
-  padding: 3px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 4px;
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  gap: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  gap: 3px;
 }
 
 .lang-btn {
   background: transparent;
   border: none;
   color: #ffffff;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  touch-action: manipulation;
 }
 
 .lang-btn:active {
@@ -411,7 +408,187 @@ body {
 .lang-btn.active {
   background: #ffffff;
   color: var(--primary);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================================================
+   TABLET & IPAD OPTIMIERUNG (min-width: 768px)
+   Speziell abgestimmt auf iPad Hoch- und Querformat für Schüler-Tandems
+   ========================================================================== */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding-bottom: 60px;
+  }
+
+  .header-inner,
+  .info-banner,
+  .container {
+    max-width: 880px;
+    width: calc(100% - 48px);
+  }
+
+  .app-header {
+    padding: 34px 28px 28px;
+  }
+
+  .badge-tag {
+    font-size: 13.5px;
+    padding: 5px 16px;
+    margin-bottom: 12px;
+  }
+
+  .app-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .header-subtitle {
+    font-size: 17px;
+  }
+
+  .lang-btn {
+    font-size: 15.5px;
+    padding: 8px 20px;
+  }
+
+  .info-banner {
+    padding: 16px 22px;
+    font-size: 16.5px;
+    gap: 16px;
+    border-radius: 16px;
+    margin: 22px auto 18px;
+  }
+
+  .info-icon {
+    font-size: 30px;
+  }
+
+  .container {
+    gap: 20px;
+    padding: 0;
+  }
+
+  .task-card {
+    border-radius: 18px;
+  }
+
+  .task-header {
+    padding: 22px 26px;
+    gap: 16px;
+  }
+
+  .task-badge {
+    font-size: 15px;
+    padding: 6px 15px;
+    border-radius: 10px;
+  }
+
+  .task-title {
+    font-size: 21px;
+  }
+
+  .task-arrow {
+    font-size: 18px;
+  }
+
+  .task-body {
+    padding: 0 26px 26px;
+  }
+
+  .task-question {
+    font-size: 18px;
+    padding: 15px 20px;
+    margin: 18px 0 22px;
+    border-left-width: 5px;
+    border-radius: 0 12px 12px 0;
+  }
+
+  .hint-list {
+    gap: 14px;
+  }
+
+  .hint-item {
+    border-radius: 14px;
+  }
+
+  .hint-btn {
+    font-size: 18px;
+    padding: 16px 22px;
+  }
+
+  .step-num {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .hint-state {
+    font-size: 14.5px;
+    padding: 6px 14px;
+    border-radius: 8px;
+  }
+
+  .hint-box {
+    font-size: 17.5px;
+    line-height: 1.65;
+    padding: 18px 26px 22px;
+  }
+
+  .math-highlight {
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    margin: 12px 0;
+  }
+
+  .app-footer {
+    font-size: 15px;
+    padding: 34px 16px 12px;
+  }
+}
+
+/* ==========================================================================
+   IPAD LANDSCAPE & DESKTOP (min-width: 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .header-inner,
+  .info-banner,
+  .container {
+    max-width: 980px;
+    width: calc(100% - 64px);
+  }
+
+  .app-header h1 {
+    font-size: 34px;
+  }
+
+  .task-header {
+    padding: 24px 30px;
+  }
+
+  .task-title {
+    font-size: 22px;
+  }
+
+  .task-body {
+    padding: 0 30px 30px;
+  }
+
+  .task-question {
+    font-size: 18.5px;
+    padding: 16px 22px;
+  }
+
+  .hint-btn {
+    font-size: 18.5px;
+    padding: 18px 24px;
+  }
+
+  .hint-box {
+    font-size: 18px;
+    padding: 20px 28px 24px;
+  }
 }
 
 /* Sichtbarkeitsregeln für zweisprachige Elemente */
