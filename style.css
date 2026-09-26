@@ -412,20 +412,21 @@ body {
 }
 
 /* ==========================================================================
-   TABLET & IPAD OPTIMIERUNG (min-width: 768px)
-   Speziell abgestimmt auf iPad Hoch- und Querformat für Schüler-Tandems
+   TABLET & IPAD OPTIMIERUNG (min-width: 600px)
+   Speziell abgestimmt auf alle iPad-Modelle (Mini, Standard 10.2", Air, Pro)
+   und Split-View-Modi für Schüler-Tandems
    ========================================================================== */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   body {
-    font-size: 18px;
+    font-size: 19px;
     padding-bottom: 60px;
   }
 
   .header-inner,
   .info-banner,
   .container {
-    max-width: 880px;
-    width: calc(100% - 48px);
+    max-width: 900px;
+    width: calc(100% - 40px);
   }
 
   .app-header {
